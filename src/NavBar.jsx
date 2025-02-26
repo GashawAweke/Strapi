@@ -2,6 +2,7 @@ import React from 'react';
 import { useGlobalContext } from './context';
 import { FaBars } from 'react-icons/fa';
 import NavLinks from './Navlinks';
+import logo from './assets/nexterizeFullWhite.png';
 
 const NavBar = () => {
   const { openSidebar, setPageID } = useGlobalContext();
@@ -15,7 +16,7 @@ const NavBar = () => {
   return (
     <nav onMouseOver={handleSubmenu}>
       <div className='nav-center'>
-        <h3 className='logo'>SubMenu</h3>
+        <img src={logo} alt='Nexterize' style={{ width: 200 }} />
         <button className='toggle-btn' onClick={openSidebar}>
           <FaBars />
         </button>
